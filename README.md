@@ -6,7 +6,7 @@
 
 # Step3:- Git clone repo_url
 
-# Step 5:- open the folder unzip frontend Unzip backend
+# Step 5:- open the folder unzip frontend
 
 # Step6:- Go back to main folder.
 
