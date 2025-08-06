@@ -130,14 +130,7 @@
 
 // export default App;
 
-
-
-
-
-
-
-// creating with mediaQuery 
-
+// creating with mediaQuery
 
 import { useState } from "react";
 import "./App.css";
@@ -170,19 +163,16 @@ function App() {
   const is768 = useMediaQuery("(max-width:768px)");
   const is1080 = useMediaQuery("(max-width:1080px)");
 
-  //api: "http://localhost:8080/api/email/generate"
+  
 
   const handleSubmit = async () => {
     setloading(true);
     setError("");
     try {
-      const response = await axios.post(
-        {REACT_API_URL},
-        {
-          emailContent,
-          tone,
-        }
-      );
+      const response = await axios.post(`${process.env.REACT_API_URL}`, {
+        emailContent,
+        tone,
+      });
       setGeneratedReply(
         typeof response.data === "string"
           ? response.data
