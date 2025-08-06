@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+@media (max-width: 480px) {
+    .home-container {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .home-container {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
