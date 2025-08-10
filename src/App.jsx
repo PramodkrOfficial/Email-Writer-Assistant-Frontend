@@ -149,7 +149,7 @@ import {
   useTheme,
 } from "@mui/material";
 import axios from "axios";
-import process from "process";
+
 
 function App() {
   const [emailContent, setEmailContent] = useState("");
@@ -164,16 +164,20 @@ function App() {
   const is768 = useMediaQuery("(max-width:768px)");
   const is1080 = useMediaQuery("(max-width:1080px)");
 
-  const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+
 
   const handleSubmit = async () => {
     setloading(true);
     setError("");
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}`, {
-        emailContent,
-        tone,
-      });
+      const response = await axios.post(
+        (`${import.meta.env.VITE_API_URL}api/email/generate`),
+        // `{"https://email-writer-app-latest-zp6w.onrender.com"}`,
+        {
+          emailContent,
+          tone,
+        }
+      );
       setGeneratedReply(
         typeof response.data === "string"
           ? response.data
