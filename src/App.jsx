@@ -171,7 +171,7 @@ function App() {
     setError("");
     try {
       const response = await axios.post(
-        (`${import.meta.env.VITE_API_URL}api/email/generate`),
+        (`${import.meta.env.VITE_API_URL}/api/email/generate`),
         // `{"https://email-writer-app-latest-zp6w.onrender.com"}`,
         {
           emailContent,
